@@ -1,4 +1,4 @@
-# Project 10: AI Cybersecurity Network Subnet
+# AI Cybersecurity Network Subnet
 
 ## Overview
 A decentralized, real-time threat intelligence and cybersecurity analytics platform powered by Bittensor. Security experts and AI models collaborate to detect, analyze, and mitigate cyber threats with on-chain transparency and token incentives.

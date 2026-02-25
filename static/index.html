@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cybersecurity Network — Bittensor Subnet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo">
+                <img src="/static/AI Cybersecurity Network.png" alt="AI CyberSecurity Network" class="logo-img"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <svg viewBox="0 0 50 60" width="40" height="48" class="logo-svg" style="display:none;">
+                    <!-- Owl head / ears -->
+                    <path d="M10 24 L2 8 L16 18" fill="#0ea5e9" stroke="#22d3ee" stroke-width="0.8" opacity="0.9"/>
+                    <path d="M40 24 L48 8 L34 18" fill="#0ea5e9" stroke="#22d3ee" stroke-width="0.8" opacity="0.9"/>
+                    <!-- Owl face -->
+                    <path d="M8 24 Q8 12 25 10 Q42 12 42 24 L42 30 Q42 38 25 40 Q8 38 8 30 Z" fill="#0c2a4a" stroke="#22d3ee" stroke-width="1"/>
+                    <!-- Eyes -->
+                    <circle cx="18" cy="26" r="6" fill="none" stroke="#a3e635" stroke-width="1.2"/>
+                    <circle cx="18" cy="26" r="4" fill="none" stroke="#a3e635" stroke-width="0.6" opacity="0.6"/>
+                    <circle cx="18" cy="26" r="2" fill="#a3e635"/>
+                    <circle cx="32" cy="26" r="6" fill="none" stroke="#a3e635" stroke-width="1.2"/>
+                    <circle cx="32" cy="26" r="4" fill="none" stroke="#a3e635" stroke-width="0.6" opacity="0.6"/>
+                    <circle cx="32" cy="26" r="2" fill="#a3e635"/>
+                    <!-- Beak -->
+                    <path d="M22 31 L25 36 L28 31" fill="#a3e635" opacity="0.8"/>
+                    <!-- Shield body -->
+                    <path d="M10 38 L10 48 Q10 56 25 58 Q40 56 40 48 L40 38 Q40 42 25 44 Q10 42 10 38 Z" fill="#0c2a4a" stroke="#a3e635" stroke-width="1"/>
+                    <!-- Circuit lines -->
+                    <line x1="16" y1="46" x2="16" y2="54" stroke="#22d3ee" stroke-width="0.5" opacity="0.5"/>
+                    <line x1="22" y1="48" x2="22" y2="52" stroke="#a3e635" stroke-width="0.5" opacity="0.5"/>
+                    <line x1="28" y1="48" x2="28" y2="52" stroke="#a3e635" stroke-width="0.5" opacity="0.5"/>
+                    <line x1="34" y1="46" x2="34" y2="54" stroke="#22d3ee" stroke-width="0.5" opacity="0.5"/>
+                    <circle cx="16" cy="54" r="1.5" fill="#22d3ee" opacity="0.6"/>
+                    <circle cx="22" cy="52" r="1" fill="#a3e635" opacity="0.5"/>
+                    <circle cx="28" cy="52" r="1" fill="#a3e635" opacity="0.5"/>
+                    <circle cx="34" cy="54" r="1.5" fill="#22d3ee" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="nav-title">
+                <h1>AI Cybersecurity Network <strong>Subnet</strong></h1>
+                <p>Decentralized Threat Intelligence — Powered by Bittensor & Yuma Consensus</p>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="subnet-badge">
+                <span class="live-dot"></span>
+                SUBNET #10 &bull; LIVE
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <div class="content-grid">
+
+            <!-- ===== LEFT PANEL: Input Form ===== -->
+            <div class="panel panel-input">
+                <div class="panel-header">
+                    <span class="panel-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </span>
+                    <h2>Submit Threat Query</h2>
+                </div>
+
+                <form id="analyzeForm" onsubmit="submitAnalysis(event)">
+                    <div class="form-group">
+                        <label for="threatType">THREAT TYPE</label>
+                        <div class="select-wrapper">
+                            <select id="threatType">
+                                <option value="malware">Malware / Ransomware</option>
+                                <option value="phishing">Phishing / Social Engineering</option>
+                                <option value="ddos">DDoS Attack</option>
+                                <option value="sql injection">SQL Injection / Web Attack</option>
+                                <option value="zero-day">Zero-Day Exploit</option>
+                                <option value="insider threat">Insider Threat / Data Exfiltration</option>
+                            </select>
+                            <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetSystem">TARGET SYSTEM</label>
+                        <div class="select-wrapper">
+                            <select id="targetSystem">
+                                <option value="Web Application">Web Application</option>
+                                <option value="Internal Network">Internal Network</option>
+                                <option value="Cloud Infrastructure">Cloud Infrastructure (AWS/GCP/Azure)</option>
+                                <option value="Email System">Email System</option>
+                                <option value="Endpoint Device">Endpoint Device</option>
+                                <option value="Database Server">Database Server</option>
+                                <option value="IoT Device">IoT / OT Device</option>
+                            </select>
+                            <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">DESCRIBE THE THREAT</label>
+                        <textarea id="description" rows="5" placeholder="We detected suspicious outbound traffic from our database server to an unknown IP address at 3 AM, along with unusual CPU spikes."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        Broadcast to Subnet Miners
+                    </button>
+                </form>
+            </div>
+
+            <!-- ===== RIGHT PANEL: Result ===== -->
+            <div class="panel panel-result">
+
+                <!-- Empty State -->
+                <div class="state-empty" id="stateEmpty">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 96" width="64" height="76">
+                            <!-- Owl head -->
+                            <path d="M16 34 L6 14 L26 28" fill="none" stroke="#1a3550" stroke-width="1.5"/>
+                            <path d="M64 34 L74 14 L54 28" fill="none" stroke="#1a3550" stroke-width="1.5"/>
+                            <path d="M14 34 Q14 18 40 14 Q66 18 66 34 L66 44 Q66 54 40 58 Q14 54 14 44 Z" fill="none" stroke="#1a3550" stroke-width="1.5"/>
+                            <!-- Eyes -->
+                            <circle cx="30" cy="38" r="8" fill="none" stroke="#1e3d5a" stroke-width="1.2"/>
+                            <circle cx="30" cy="38" r="4" fill="#1e3d5a" opacity="0.4"/>
+                            <circle cx="50" cy="38" r="8" fill="none" stroke="#1e3d5a" stroke-width="1.2"/>
+                            <circle cx="50" cy="38" r="4" fill="#1e3d5a" opacity="0.4"/>
+                            <!-- Beak -->
+                            <path d="M36 46 L40 52 L44 46" fill="none" stroke="#1e3d5a" stroke-width="1.2"/>
+                            <!-- Shield -->
+                            <path d="M18 56 L18 72 Q18 84 40 88 Q62 84 62 72 L62 56 Q62 62 40 64 Q18 62 18 56 Z" fill="none" stroke="#1a3550" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="empty-text">Submit a threat query to broadcast it to all miners on the subnet.</p>
+                    <p class="empty-text">Miners will compete to provide the best threat analysis.</p>
+                    <p class="empty-text">Validators will verify every indicator against threat databases.</p>
+                </div>
+
+                <!-- Loading State -->
+                <div class="state-loading" id="stateLoading" style="display:none;">
+                    <div class="loader-container">
+                        <div class="loader-owl">
+                            <svg viewBox="0 0 50 60" width="44" height="52">
+                                <path d="M10 24 L2 8 L16 18" fill="#0c4a6e" stroke="#22d3ee" stroke-width="0.8"/>
+                                <path d="M40 24 L48 8 L34 18" fill="#0c4a6e" stroke="#22d3ee" stroke-width="0.8"/>
+                                <path d="M8 24 Q8 12 25 10 Q42 12 42 24 L42 30 Q42 38 25 40 Q8 38 8 30 Z" fill="#0c2a4a" stroke="#22d3ee" stroke-width="1"/>
+                                <circle cx="18" cy="26" r="5" fill="none" stroke="#a3e635" stroke-width="1" class="eye-pulse"/>
+                                <circle cx="18" cy="26" r="2.5" fill="#a3e635" opacity="0.8"/>
+                                <circle cx="32" cy="26" r="5" fill="none" stroke="#a3e635" stroke-width="1" class="eye-pulse"/>
+                                <circle cx="32" cy="26" r="2.5" fill="#a3e635" opacity="0.8"/>
+                                <path d="M22 31 L25 35 L28 31" fill="#a3e635" opacity="0.7"/>
+                                <path d="M10 38 L10 48 Q10 56 25 58 Q40 56 40 48 L40 38 Q40 42 25 44 Q10 42 10 38 Z" fill="#0c2a4a" stroke="#a3e635" stroke-width="0.8"/>
+                            </svg>
+                        </div>
+                        <div class="loader-text">
+                            <p class="loader-title">Broadcasting to subnet miners...</p>
+                            <div class="loader-steps" id="loaderSteps">
+                                <div class="loader-step active">
+                                    <span class="step-indicator"></span>
+                                    <span>Querying Bittensor subnet nodes...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Miners analyzing threat data...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Validators verifying analysis...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Reaching consensus &amp; generating report...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loader-bar"><div class="loader-bar-fill" id="loaderBarFill"></div></div>
+                </div>
+
+                <!-- Result State -->
+                <div class="state-result" id="stateResult" style="display:none;">
+
+                    <!-- Result Top Bar -->
+                    <div class="result-topbar">
+                        <div class="result-topbar-left">
+                            <span class="result-badge" id="resultBadge">CRITICAL</span>
+                            <span class="result-threat-name" id="resultThreatName">Trojan.GenericKD.46789</span>
+                        </div>
+                        <div class="result-topbar-right">
+                            <span class="result-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span id="resultTime">1.2s</span>
+                            </span>
+                            <span class="result-meta-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <span id="resultMiners">32 miners</span>
+                            </span>
+                            <span class="result-meta-item confidence">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <span id="resultConfidence">95%</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Risk Score -->
+                    <div class="result-risk-row">
+                        <div class="risk-gauge">
+                            <svg viewBox="0 0 120 120" width="100" height="100">
+                                <circle cx="60" cy="60" r="50" fill="none" stroke="#0f2a42" stroke-width="8"/>
+                                <circle cx="60" cy="60" r="50" fill="none" stroke-width="8" stroke-linecap="round"
+                                    stroke-dasharray="314" stroke-dashoffset="314"
+                                    id="riskArc" class="risk-arc"/>
+                            </svg>
+                            <div class="risk-gauge-inner">
+                                <span class="risk-gauge-score" id="riskScore">0</span>
+                                <span class="risk-gauge-label">/ 100</span>
+                            </div>
+                        </div>
+                        <div class="risk-details">
+                            <div class="risk-detail-row">
+                                <span class="risk-detail-label">Category</span>
+                                <span class="risk-detail-value" id="resultCategory">Malware</span>
+                            </div>
+                            <div class="risk-detail-row">
+                                <span class="risk-detail-label">Risk Level</span>
+                                <span class="risk-detail-value" id="resultRiskLevel">Critical</span>
+                            </div>
+                            <div class="risk-detail-row">
+                                <span class="risk-detail-label">Subnet Version</span>
+                                <span class="risk-detail-value mono" id="resultSubnet">v1.0.0-beta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== MINER RESPONSES ===== -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-cyan"></span>
+                            Miner Responses
+                            <span class="section-count" id="minerCount">0 miners</span>
+                        </h3>
+                        <div class="miner-list" id="minerList"></div>
+                    </div>
+
+                    <!-- ===== VALIDATOR VERIFICATION ===== -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-lime"></span>
+                            Validator Verification
+                            <span class="section-count" id="validatorCount">0 validators</span>
+                        </h3>
+                        <div class="validator-list" id="validatorList"></div>
+                    </div>
+
+                    <!-- ===== CONSENSUS ===== -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-amber"></span>
+                            Consensus &amp; Reward
+                        </h3>
+                        <div class="consensus-box" id="consensusBox">
+                            <div class="consensus-row">
+                                <span class="consensus-label">Consensus</span>
+                                <span class="consensus-value consensus-approved" id="consensusStatus">Reached</span>
+                            </div>
+                            <div class="consensus-row">
+                                <span class="consensus-label">Block Number</span>
+                                <span class="consensus-value mono" id="blockNumber">#3,912,847</span>
+                            </div>
+                            <div class="consensus-row">
+                                <span class="consensus-label">TAO Reward Pool</span>
+                                <span class="consensus-value tao-value" id="taoReward">0.0000 τ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indicators -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-red"></span>
+                            Indicators of Compromise
+                        </h3>
+                        <div class="tag-list" id="iocTags"></div>
+                    </div>
+
+                    <!-- Mitigation -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-lime"></span>
+                            Mitigation Strategy
+                        </h3>
+                        <div class="result-text" id="mitigationText"></div>
+                    </div>
+
+                    <!-- Recommendation -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-cyan"></span>
+                            Recommendations
+                        </h3>
+                        <div class="result-text" id="recommendationText"></div>
+                    </div>
+
+                    <!-- Affected Systems -->
+                    <div class="result-section">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-amber"></span>
+                            Affected Systems
+                        </h3>
+                        <div class="tag-list" id="systemTags"></div>
+                    </div>
+
+                    <!-- CVE References -->
+                    <div class="result-section" id="cveSection" style="display:none;">
+                        <h3 class="result-section-title">
+                            <span class="section-dot dot-purple"></span>
+                            CVE References
+                        </h3>
+                        <div class="tag-list" id="cveTags"></div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="result-footer">
+                        <span class="result-footer-text" id="resultTimestamp"></span>
+                        <button class="btn-new" onclick="resetAnalysis()">+ New Query</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
